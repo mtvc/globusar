@@ -1,0 +1,74 @@
+$margin: 0.5rem;
+$padding: 1rem;
+
+$space: calc(($margin) + ($padding)) * 2;
+
+.col {
+  margin: $margin;
+  padding: $padding;
+}
+
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.col-1 {
+  flex: 0 0 auto;
+  width: calc(8.33333333% - ($space));
+}
+
+.col-2 {
+  flex: 0 0 auto;
+  width: calc(16.66666667% - ($space));
+}
+
+.col-3 {
+  flex: 0 0 auto;
+  width: calc(25% - ($space));
+}
+
+.col-4 {
+  flex: 0 0 auto;
+  width: calc(33.33333333% - ($space));
+}
+
+.col-5 {
+  flex: 0 0 auto;
+  width: calc(41.66666667% - ($space));
+}
+
+.col-6 {
+  flex: 0 0 auto;
+  width: calc(50% - ($space));
+}
+
+.col-7 {
+  flex: 0 0 auto;
+  width: calc(58.33333333% - ($space));
+}
+
+.col-8 {
+  flex: 0 0 auto;
+  width: calc(66.66666667% - ($space));
+}
+
+.col-9 {
+  flex: 0 0 auto;
+  width: calc(75% - ($space));
+}
+
+.col-10 {
+  flex: 0 0 auto;
+  width: calc(83.33333333% - ($space));
+}
+
+.col-11 {
+  flex: 0 0 auto;
+  width: calc(91.66666667% - ($space));
+}
+
+.col-12 {
+  flex: 0 0 auto;
+  width: calc(100% - ($space));
+}

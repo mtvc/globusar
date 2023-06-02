@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find a place</title>
+    <link rel="stylesheet" href="/src/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <!-- <link rel="stylesheet" href="/src/css/leaflet.css" /> -->
+    <!-- <script defer src="/src/js/leaflet.js"></script> -->
+    <script defer src="/src/js/main.js"></script>
+  </head>
+
+  <body>
+    <section class="col-12">
+      <h1 class="logo">Globusar</h1>
+    </section>
+    <section class="search">
+      <button type="submit" class="btn btn-outline-primary btn-search-country">
+        Spin the globe...
+      </button>
+    </section>
+    <section class="fl-l col col-8">
+      <div id="map"></div>
+    </section>
+    <section class="country-container fl-r col col-4"></section>
+  </body>
+  <footer></footer>
+</html>

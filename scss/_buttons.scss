@@ -1,0 +1,29 @@
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.btn-primary {
+  background-color: $primary-color;
+  color: $secondary-color;
+  border: 2px solid $primary-color;
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  color: $primary-color;
+  border: 2px solid $primary-color;
+}
+
+.btn-primary:hover {
+  background-color: $secondary-color;
+  color: $primary-color;
+  border: 2px solid $primary-color;
+}
+
+.btn-outline-primary:hover {
+  background-color: $primary-color;
+  color: $secondary-color;
+  border: 2px solid $secondary-color;
+}

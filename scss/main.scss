@@ -1,0 +1,28 @@
+@import 'config';
+@import 'grid';
+@import 'mixins';
+@import 'buttons';
+@import 'mobile';
+@import 'country-container';
+
+.logo {
+  padding-left: 0.5em;
+  color: $accent-color;
+}
+
+#map {
+  height: 700px;
+  width: 100%;
+}
+
+.search {
+  padding: 1em 0;
+  background-color: $secondary-color;
+  .btn {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

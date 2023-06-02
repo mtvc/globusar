@@ -1,0 +1,85 @@
+// Colors
+$primary-color: #1d3557;
+$secondary-color: #f1faee;
+
+$third-color: #457b9d;
+$fourth-color: #a8dadc;
+
+$accent-color: #e63946;
+
+// Base
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.fl-l {
+  background-color: $secondary-color;
+  float: left;
+}
+
+.fl-r {
+  background-color: $secondary-color;
+  float: right;
+}
+
+link,
+button {
+  cursor: pointer;
+}
+
+// Fonts
+$font-family-primary: 'Roboto', sans-serif;
+$font-family-secondary: 'Nunito Sans', sans-serif;
+
+// Headings
+@mixin headings {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @content;
+  }
+}
+@include headings {
+  color: $primary-color;
+  background-color: transparent;
+  font-family: $font-family-primary;
+  padding: 0.5em 0;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 15px;
+}
+
+h6 {
+  font-size: 12px;
+}
+
+// Paragraf
+
+p {
+  font-family: $font-family-secondary;
+  font-size: 16px;
+  background-color: transparent;
+  padding: 0.2em 0;
+}
