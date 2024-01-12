@@ -70,6 +70,9 @@ function getCoords() {
       L.marker(coords).addTo(map).bindPopup(`${lat}, ${lng}`).openPopup();
 
       // Show countries
+      if (data.countryName === 'Russian Federation (the)') {
+        data.countryName = 'russia';
+      }
       return fetch(`https://restcountries.com/v2/name/${data.countryName}`);
     })
     .then(res => {
