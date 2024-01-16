@@ -38,6 +38,7 @@ function getCoords() {
                 <p class="country__row"><span>💰</span>${
                   data.currencies[0].name
                 }</p>
+                <p class="country__row"><span>🗺 </span>${data.region}</p>
               </div>
             </article>
             `;
@@ -54,8 +55,8 @@ function getCoords() {
       return res.json();
     })
     .then(data => {
-      // console.log(data);
-      // console.log(data.countryName);
+      console.log(data);
+      console.log(data.countryName);
 
       if (!data.countryName) {
         getCoords();
@@ -67,12 +68,21 @@ function getCoords() {
         return;
       }
 
+      const countryNameMapping = {
+        Antarctica: 'Antarctic',
+        'United States of America (the)': 'usa',
+        'Russian Federation (the)': 'russia',
+        Congo: 'congo',
+      };
+
+      if (countryNameMapping[data.countryName]) {
+        data.countryName = countryNameMapping[data.countryName];
+      }
+
       L.marker(coords).addTo(map).bindPopup(`${lat}, ${lng}`).openPopup();
 
       // Show countries
-      if (data.countryName === 'Russian Federation (the)') {
-        data.countryName = 'russia';
-      }
+
       return fetch(`https://restcountries.com/v2/name/${data.countryName}`);
     })
     .then(res => {
