@@ -20,9 +20,11 @@ function getCoords() {
 
   countryContainer.innerHTML = '';
 
-  map.setView(coords, 3);
+  map.setView(coords, 2);
 
   const renderCountry = function (data, className = '') {
+    const isIndependent =
+      data.independent === true ? 'Independent' : 'Not independent';
     const html = `
       <article class="country ${className}">
               <img class="country__img" src="${data.flag}" />
@@ -38,7 +40,7 @@ function getCoords() {
                 <p class="country__row"><span>💰</span>${
                   data.currencies[0].name
                 }</p>
-                <p class="country__row"><span>🗺 </span>${data.region}</p>
+                  <p class="country__row"><span>🗺 </span>${isIndependent}</p>
               </div>
             </article>
             `;
@@ -69,7 +71,7 @@ function getCoords() {
       }
 
       const countryNameMapping = {
-        Antarctica: 'Antarctic',
+        Antarctica: 'antarctica',
         'United States of America (the)': 'usa',
         'Russian Federation (the)': 'russia',
         Congo: 'congo',
@@ -79,9 +81,8 @@ function getCoords() {
         data.countryName = countryNameMapping[data.countryName];
       }
 
-      L.marker(coords).addTo(map).bindPopup(`${lat}, ${lng}`).openPopup();
-
       // Show countries
+      L.marker(coords).addTo(map).bindPopup(`${lat}, ${lng}`).openPopup();
 
       return fetch(`https://restcountries.com/v2/name/${data.countryName}`);
     })
