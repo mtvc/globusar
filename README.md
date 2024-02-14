@@ -1,1 +1,1 @@
-Globusar is JS random country picker using geocoding and countries API. Some isues with Antartic need to be fixed.
+Globusar is JS random country picker using openstreetmap.org API and geocoding and restcountries.com API. Some isues with Antartic need to be fixed.
