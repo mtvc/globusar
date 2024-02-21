@@ -75,6 +75,7 @@ function getCoords() {
         'United States of America (the)': 'usa',
         'Russian Federation (the)': 'russia',
         Congo: 'congo',
+        'Sudan (the)': 'sudan',
       };
 
       if (countryNameMapping[data.countryName]) {
