@@ -74,7 +74,7 @@ function getCoords() {
         Antarctica: 'antarctica',
         'United States of America (the)': 'usa',
         'Russian Federation (the)': 'russia',
-        Congo: 'congo',
+        'Congo (the Democratic Republic of the)': 'congo',
         'Sudan (the)': 'sudan',
       };
 
