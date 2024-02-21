@@ -1,3 +1,4 @@
+
 // Getting random longitude and latitude
 
 const btnSearch = document.querySelector('.btn-search-country');
@@ -21,6 +22,7 @@ function getCoords() {
   countryContainer.innerHTML = '';
 
   map.setView(coords, 2);
+   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png'
 
   const renderCountry = function (data, className = '') {
     const isIndependent =
