@@ -60,7 +60,7 @@ function getCoords() {
       console.log(data);
       console.log(data.countryName);
 
-      if (!data.countryName) {
+      if (!data.countryName || data.countryName === 'Antarctica') {
         getCoords();
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
