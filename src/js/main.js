@@ -72,7 +72,6 @@ function getCoords() {
       }
 
       const countryNameMapping = {
-        Antarctica: 'antarctica',
         'United States of America (the)': 'usa',
         'Russian Federation (the)': 'russia',
         'Congo (the Democratic Republic of the)': 'congo',
