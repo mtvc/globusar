@@ -89,6 +89,8 @@ document.addEventListener('DOMContentLoaded', function () {
           'Russian Federation (the)': 'russia',
           'Congo (the Democratic Republic of the)': 'congo',
           'Sudan (the)': 'sudan',
+          'United Kingdom of Great Britain and Northern Ireland (the)':
+            'United Kingdom of Great Britain and Northern Ireland',
         };
 
         if (countryNameMapping[data.countryName]) {
