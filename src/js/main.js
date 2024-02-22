@@ -78,8 +78,8 @@ document.addEventListener('DOMContentLoaded', function () {
           getCoords();
 
           L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            // attribution:
-            //'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            attribution:
+              '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
           }).addTo(map);
           return;
         }
@@ -97,7 +97,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         marker = L.marker(coords)
           .addTo(map)
-          .bindPopup(`${lat}, ${lng}`)
+          .bindPopup(`${data.city}<br/>${data.locality}`)
+          // .bindPopup(`${lat}, ${lng}`)
           .openPopup();
 
         // Show countries
